@@ -4,6 +4,8 @@
   }
 **/
 export const light = {
+  title: 'white',
+  paragraph: 'gray',
   colors: {
     blue: ['#0c213f', '#62b6cb', '#bee9e8'],
     white: ['#ffff'],

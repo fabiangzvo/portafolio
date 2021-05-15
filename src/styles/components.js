@@ -13,10 +13,14 @@ export const Layout = styled(Grid)`
   ${space}
 `
 export const H1 = styled(motion.h1)`
-${color}
+  ${color}
   ${typography}
   ${flexbox}
   ${space}
+
+  & > span {
+    cursor: default;
+  }
 `
 export const H2 = styled(motion.h2)`
 ${color}
@@ -63,6 +67,7 @@ export const Text = styled.div`
   ${typography}
   ${space}
   opacity:${props => props.opacity || '1'};
+  width:${({ width }) => width};
 `
 
 export const Link = styled(Anchor)`

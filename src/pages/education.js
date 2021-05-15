@@ -1,10 +1,11 @@
 import React from 'react'
-import { GiDiploma, GiGraduateCap } from "react-icons/gi";
+import { GiGraduateCap } from "react-icons/gi";
 import { useStaticQuery, graphql } from "gatsby";
-import { List, ListItem, ListItemText, ListItemAvatar } from "@material-ui/core";
+import { List } from "@material-ui/core";
 
-import { H1, Text } from "../styles/components"
+import { H1 } from "../styles/components"
 import Layout from "../components/Layout/index";
+import EducationCard from "../components/EducationCard";
 
 const query = graphql`
 query getEducation {
@@ -13,7 +14,7 @@ query getEducation {
       title
       entity
       location
-      year
+      time
     }
   }
 }
@@ -34,17 +35,8 @@ const Education = ({ transitionStatus }) => {
         fontWeight='bold' fontFamily="'Comfortaa',cursive">
         EDUCATION&nbsp;<GiGraduateCap /></H1>
       <List>
-        {education.map(item => <ListItem>
-          <ListItemAvatar>
-            <GiDiploma />
-          </ListItemAvatar><ListItemText primary={item.title} secondary={item.entity} /></ListItem>)}
+        {education.map(item => <EducationCard item={item} />)}
       </List>
-
-      <Text lineHeight='2em' alignItems='center' fontFamily="'Comfortaa',cursive" ><GiDiploma /> &nbsp;7 approved semesters of ing. software in the EAM university.</Text>
-      <Text lineHeight='2em' alignItems='center' fontFamily="'Comfortaa',cursive" ><GiDiploma /> &nbsp;Professional technician in software development, EAM 2019.</Text>
-      <Text lineHeight='2em' alignItems='center' fontFamily="'Comfortaa',cursive" ><GiDiploma /> &nbsp;Professional technician in software development, sena 2015.</Text>
-      <Text lineHeight='2em' alignItems='center' fontFamily="'Comfortaa',cursive" ><GiDiploma /> &nbsp;high school - policarpa salavarrieta educational institution - Quimbaya,Quindio 2015.</Text>
-      <Text lineHeight='2em' alignItems='center' fontFamily="'Comfortaa',cursive" ><GiDiploma /> &nbsp;Primary school - holy spirit educational institution - Quimbaya,Quindio 2008. </Text>
     </Layout>
   )
 }

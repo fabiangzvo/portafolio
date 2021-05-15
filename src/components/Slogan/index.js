@@ -1,6 +1,5 @@
-import React, { useRef, useEffect } from 'react'
+import React from 'react'
 import animation from "../../HOC/Animation";
-import { Console, Code, Layout } from "../../styles/components"
 import { Container } from "./Slogan.style";
 
 const Slogan = ({ reference }) => {

@@ -10,18 +10,19 @@ import { Power4 } from "gsap";
 import { motion, AnimatePresence } from "framer-motion"
 
 const Terminal = ({ reference, umount, transitionStatus, entry, exit }) => {
-  const texts = ['const &nbsp;', 'response &nbsp;', '= &nbsp;', 'await &nbsp;', 'fetch', '(',
-    '"https://fabiangzvo.dev/logo"', ')', 'const &nbsp;', 'data &nbsp;', '= &nbsp;', 'await &nbsp;',
-    'res.', 'json', '()', 'console.', 'log', '(&nbsp;', 'response.', 'logo&nbsp;', ')']
   let variable = false
   const [show, ref] = useNearScreen()
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
+    const texts = ['const &nbsp;', 'response &nbsp;', '= &nbsp;', 'await &nbsp;', 'fetch', '(',
+      '"https://fabiangzvo.dev/logo"', ')', 'const &nbsp;', 'data &nbsp;', '= &nbsp;', 'await &nbsp;',
+      'res.', 'json', '()', 'console.', 'log', '(&nbsp;', 'response.', 'logo&nbsp;', ')']
+
     const me = async () => {
       if (show) {
         const res = await typingEffect('.typing-effect', texts)
-        setVisible(await res)
+        setVisible(res)
       }
     }
 

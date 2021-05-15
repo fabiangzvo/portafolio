@@ -1,7 +1,6 @@
 import React from 'react'
 import { H1, Text } from "../styles/components"
-import { GiTrophyCup, GiBrain } from "react-icons/gi";
-import { useStaticQuery, graphql } from "gatsby";
+import { GiBrain } from "react-icons/gi";
 import { Icon } from "../components/index";
 import Layout from "../components/Layout/index";
 

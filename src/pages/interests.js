@@ -1,6 +1,6 @@
 import React from 'react'
 import { H1, Text } from "../styles/components"
-import { GiTrophyCup, GiLighthouse } from "react-icons/gi";
+import { GiLighthouse } from "react-icons/gi";
 import Layout from "../components/Layout/index";
 
 const Interests = ({ transitionStatus }) => {
