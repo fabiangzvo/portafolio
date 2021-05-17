@@ -24,7 +24,7 @@ const About = () => {
   const handleClick = () => window.open(basicInfo.locationUrl)
 
   const currentAge =
-    moment().diff(moment(basicInfo.bornDate), "years")
+    moment().diff(basicInfo.bornDate, "years")
 
   return <AboutPage handleClick={handleClick} age={currentAge} {...basicInfo} />
 }

@@ -1,7 +1,8 @@
 import React from 'react'
-import { H3, Text, ExperienceCard, Layout } from "../../styles/components"
+import { H3, Text, ExperienceCard } from "../../styles/components"
 import { MdWork, MdAccessTime } from "react-icons/md"
 import { Icon } from "../index";
+import { Layout } from "./styles";
 
 const WorkCard = ({ job, employer, time, icons = [] }) => {
 

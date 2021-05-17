@@ -8,11 +8,11 @@ import { H1, Template, LocationText, AgeText, ResumeText } from "./styles";
 
 const TemplateWrapper = ({ children }) => <section>{children}</section>
 
-const About = (props) => {
-  const { transitionStatus, handleClick, age, name, location, resume } = props
+const About = props => {
+  const { transitionStatus, handleClick, age, name, location, resume, page } = props
 
   return (
-    <Layout className={transitionStatus} width='100vw' flexDirection='column' bg='blue.0' height='100vh' justifyContent='space-around' alignItems='center' >
+    <Layout className={transitionStatus} page={page} >
       <H1 {...constants.H1_PROPS}>
         {name}
       </H1>

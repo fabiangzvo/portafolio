@@ -10,7 +10,7 @@ const Skills = ({ transitionStatus }) => {
   const databases = ['mysql', 'postgres', 'mongo']
 
   return (
-    <Layout className={transitionStatus} height='100vh' bg='#0e0f14' color='white.0' flexDirection='column' alignItems='flex-start' justifyContent='center' >
+    <Layout className={transitionStatus}>
       <H1 mb='.5em' initial={{ y: 32 * 1.2 }}
         animate={{ y: 0 }}
         transition={{
