@@ -1,16 +1,15 @@
 import styled from "styled-components"
-import { flexbox, layout, color, typography, border, position, space } from "styled-system";
+import { flexbox, color, typography, border, position, space } from "styled-system";
 import { Link as Anchor } from "gatsby"
 import { motion } from "framer-motion"
 import { Grid } from '@material-ui/core'
 
-export const Layout = styled(Grid)`
+export const HomeLayout = styled(Grid)`
   display:flex;
-  ${flexbox}
-  ${layout}
-  ${color}
-  ${border}
-  ${space}
+  flex-direction:column;
+  align-items:center;
+  justify-content: space-evenly;
+  height:90%;
 `
 export const H1 = styled(motion.h1)`
   ${color}

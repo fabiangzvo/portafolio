@@ -5,9 +5,11 @@ export const GlobalStyle = createGlobalStyle`
     height:100vh !important;
     width:100vw !important;
   }
+
   body{
     margin:0;
     font-family: 'Comfortaa',cursive;
+    color:${({ theme }) => theme?.font};
   }
 
   svg{

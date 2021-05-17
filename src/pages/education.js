@@ -21,11 +21,10 @@ query getEducation {
 `
 
 const Education = ({ transitionStatus }) => {
-
   const { allEducationJson: { nodes: education } } = useStaticQuery(query)
 
   return (
-    <Layout className={transitionStatus} height='100vh' bg='#141414' color='white.0' flexDirection='column' alignItems='flex-start' justifyContent='center' >
+    <Layout className={transitionStatus}>
       <H1 mb='.5em' initial={{ y: 32 * 1.2 }}
         animate={{ y: 0 }}
         transition={{

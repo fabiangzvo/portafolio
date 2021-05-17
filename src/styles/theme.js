@@ -6,6 +6,14 @@
 export const light = {
   title: 'white',
   paragraph: 'gray',
+  about: '#0c213f',
+  awards: '#122B18',
+  education: '#141414',
+  experience: '#0d000f',
+  home: '#0c213f',
+  interests: '#41424c',
+  skills: '#0e0f14',
+  font: '#ffff',
   colors: {
     blue: ['#0c213f', '#62b6cb', '#bee9e8'],
     white: ['#ffff'],

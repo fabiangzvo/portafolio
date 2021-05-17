@@ -1,5 +1,5 @@
 import React from 'react'
-import { Svg } from "./style";
+import { Svg } from "./styles";
 
 const Options = () => {
   return (

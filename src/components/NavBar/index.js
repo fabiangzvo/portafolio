@@ -3,7 +3,7 @@ import { useLocation } from "@reach/router";
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { GrClose } from 'react-icons/gr';
 
-import { Nav, Link, Menu, StyledDrawer, Container } from "./style"
+import { Nav, Link, Menu, StyledDrawer, Container } from "./styles"
 import { Image } from "../index"
 import { AiFillTwitterCircle, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import * as constants from "./constants/NavBar";

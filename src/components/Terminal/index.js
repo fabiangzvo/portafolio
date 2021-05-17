@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react'
 
 import { typingEffect } from "../../utils/index"
 import { useNearScreen } from "../../hooks/useNearScreen"
-import { Console, Code, Layout } from "../../styles/components"
+import { Console, Code } from "../../styles/components"
 import Options from "./Options";
 import Slogan from "../Slogan/index";
 import { Power4 } from "gsap";
+import { Layout, StyledAnimatePresence } from "./styles";
 
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -39,7 +40,7 @@ const Terminal = ({ reference, umount, transitionStatus, entry, exit }) => {
   return (
     <AnimatePresence>
       <Console key={1} exit={{ opacity: 0 }} animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ ease: "easeIn", duration: 3 }} className="bash" >
-        <Layout ref={ref} width='100%' height='9%' alignItems='center' paddinLeft='1em'><Options /></Layout>
+        <Layout ref={ref}><Options /></Layout>
         <motion.div />
         <div className='vscode'>
           <Code fontSize='calc(.5em + 1vw)' className='typing-effect' color='purple.1' />

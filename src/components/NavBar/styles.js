@@ -62,6 +62,8 @@ li {
 
 export const Container = styled.div`
   position: absolute;
+  top:0;
+  margin: 0.5rem;
 
   svg {
      font-size:1.5rem;
