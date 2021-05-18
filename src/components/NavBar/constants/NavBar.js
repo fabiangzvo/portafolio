@@ -1,19 +1,9 @@
-export const routes = [{
-  path: '/about',
-  label: 'about'
-}, {
-  path: '/awards',
-  label: 'award'
-}, {
-  path: '/education',
-  label: 'education'
-}, {
-  path: '/experience',
-  label: 'experience'
-}, {
-  path: '/interests',
-  label: 'interests'
-}, {
-  path: '/skills',
-  label: 'skills'
-}]
+const constants = {}
+
+constants.DRAWER_PROPS = {
+  classes: { paper: 'drawer-custom-class' },
+  anchor: 'left',
+  elevation: 32
+}
+
+export default constants

@@ -1,43 +1,22 @@
 import styled from "styled-components"
-import { flexbox, layout, border, color } from "styled-system";
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { Drawer } from "@material-ui/core";
 
-export const Nav = styled.div`
+export const NavBarContainer = styled.div`
   display:flex;
-  ${flexbox}
-  ${color}
+  flex-direction:column;
+  justify-content:space-around;
+  align-items:center;
   text-align: center;
   position: absolute;
   top: 0;
   left: 0;
   width: 17rem;
   height: 100vh;
+  background-color:${({ theme }) => theme.home};
 `
-
-export const Link = styled(AniLink)`
-  ${layout}
-  ${border}
-  display: inline-block;
-  text-decoration:none;
-  color:#62b6cb;
-  font-weight:bold;
-  font-family:'Roboto Condensed', sans-serif;
-  font-size:1.2em;
-  line-height:2.5em;
-  :hover{
-    color:#bee9e8;
-  }
-`
-export const Menu = styled.ul`
-  display:flex;
-  ${flexbox}
-  ${layout}
-  list-style:none;
-`
-
 export const StyledDrawer = styled(Drawer)`
 .drawer-custom-class{
+  background-color:${({ theme }) => theme.home};
   width: 100%;
 }
 
@@ -47,12 +26,8 @@ export const StyledDrawer = styled(Drawer)`
   margin-top:1rem;
 }
 
-ul{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  padding:0;
+.icon path {
+  stroke:${({ theme }) => theme.icons};
 }
 
 li {

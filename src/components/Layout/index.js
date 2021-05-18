@@ -6,7 +6,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import NavBar from "../NavBar/index";
 
 const Layout = props => {
-  const { children, container, ...restProps } = props
+  const { children, container, navbar, ...restProps } = props
 
   const { pathname } = useLocation()
   const smallScreen = useMediaQuery('(max-width:768px)')
@@ -17,7 +17,7 @@ const Layout = props => {
     if (pathname === '/') return children
 
     return (
-      < Container visible={(visible && !smallScreen)}>
+      <Container visible={(visible && !smallScreen)}>
         {children}
       </Container >
     )
@@ -25,14 +25,15 @@ const Layout = props => {
 
   return (
     <Grid container={container} page={page} {...restProps}>
-      {visible && <NavBar smallScreen={smallScreen} />}
+      {navbar && visible && <NavBar smallScreen={smallScreen} />}
       {formatChildren()}
     </Grid>
   )
 }
 
 Layout.defaultProps = {
-  container: false
+  container: false,
+  navbar: true,
 }
 
 export default Layout

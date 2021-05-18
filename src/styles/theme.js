@@ -14,6 +14,7 @@ export const light = {
   interests: '#41424c',
   skills: '#0e0f14',
   font: '#ffff',
+  icons: '#62b6cb',
   colors: {
     blue: ['#0c213f', '#62b6cb', '#bee9e8'],
     white: ['#ffff'],

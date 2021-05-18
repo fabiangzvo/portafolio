@@ -12,7 +12,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const IndexPage = ({ transitionStatus = '' }) => {
   return (
-    <Layout container className={["background ", transitionStatus]} >
+    <Layout container className={["background ", transitionStatus]} navbar={false} >
       <SEO title="Home" />
       <HomeLayout item >
         <Image />
@@ -21,7 +21,7 @@ const IndexPage = ({ transitionStatus = '' }) => {
         <Terminal />
       </HomeLayout>
       <Grid container justify='center'>
-        <AniLink swipe duration={2} top="exit" entryOffset={80} direction="down" to='/about'>
+        <AniLink fade duration={2} top="exit" entryOffset={80} direction="down" to='/about'>
           <FiChevronsDown fontSize='3em' />
         </AniLink>
       </Grid>
